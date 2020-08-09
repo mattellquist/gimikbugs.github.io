@@ -4,5 +4,5 @@ permalink: /certguides/
 title: "Certification Guides"
 author_profile: true
 header:
-  image: "/images/certs.jpg"
+  image: "/images/certs2.png"
 ---
