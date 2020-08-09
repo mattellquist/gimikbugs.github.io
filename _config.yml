@@ -129,10 +129,10 @@ footer:
       url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-     # url: "https://github.com/gimikbugs"
-     # - label: "GitLab"
-     # icon: "fab fa-fw fa-gitlab"
-     # url: ""https://gitlab.com/GimikBugs""
+      url: "https://github.com/gimikbugs"
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
+      url: ""https://gitlab.com/GimikBugs""
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
