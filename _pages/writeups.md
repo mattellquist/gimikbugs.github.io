@@ -4,6 +4,6 @@ permalink: /writeups/
 title: "Writeups"
 author_profile: true
 header:
-  image: "/images/hackthebox.png"
+  image: "/images/htb.png"
 ---
 
