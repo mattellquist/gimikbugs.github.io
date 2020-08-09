@@ -1,9 +1,9 @@
 ---
-layout: archive
+layout: posts
 title: "Projects"
 permalink: /projects/
 author_profile: true
-head:
+header:
    image: "/images/projects.png"
 ---
 
