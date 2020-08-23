@@ -6,8 +6,8 @@ main:
     url: /projects/
   - title: "Writeups"
     url: /writeups/
-  - title: "Certification Guides"
-    url: /certguides/
+  - title: "Certifications"
+    url: /certifications/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
