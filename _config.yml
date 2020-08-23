@@ -101,7 +101,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:gimikbugs@gmail.com"
+      url: "mailto:gimik@gimiksec.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -112,7 +112,7 @@ author:
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fa fa-github"
       url: "https://github.com/gimikbugs"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
