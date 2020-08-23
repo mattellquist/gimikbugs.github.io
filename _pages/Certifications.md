@@ -1,6 +1,6 @@
 ---
 layout: posts
-permalink: /certguides/
+permalink: /certifications/
 title: "Certifications"
 author_profile: true
 header:
