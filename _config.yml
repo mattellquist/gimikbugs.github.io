@@ -112,7 +112,7 @@ author:
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
-      icon: "fa fa-github"
+      icon: "fab fa-fw fa-github"
       url: "https://github.com/gimikbugs"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
