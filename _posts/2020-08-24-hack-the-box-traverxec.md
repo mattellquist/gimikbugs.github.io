@@ -1,12 +1,11 @@
 ---
-layout: post
 title: "Traverxec"
 subtitle: Hack The Box
 date: 2020-08-24
 image: '/images/traverxec/traverxec_bio.png'
 share-img: '/images/traverxec/traverxec_bio.png'
 published: true
-categories: writeups
+categories: write-ups
 author: Gimik
 tags:
   - Writeup
