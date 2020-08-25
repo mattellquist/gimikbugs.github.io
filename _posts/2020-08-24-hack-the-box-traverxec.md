@@ -5,7 +5,8 @@ subtitle: Hack The Box
 date: 2020-08-24
 image: '/images/traverxec/traverxec_bio.png'
 share-img: '/images/traverxec/traverxec_bio.png'
-published: true
+published: false
+categories: writeups
 author: Gimik
 tags:
   - Writeup
