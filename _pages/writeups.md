@@ -1,6 +1,6 @@
 ---
 layout: posts
-permalink: /writeups/
+permalink: /write-ups/
 title: "Write-ups"
 author_profile: true
 header:

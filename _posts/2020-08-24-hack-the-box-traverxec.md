@@ -6,7 +6,7 @@ image: '/images/traverxec/traverxec_bio.png'
 share-img: '/images/traverxec/traverxec_bio.png'
 published: true
 categories: write-ups
-author: Gimik
+author_profile: true
 tags:
   - Writeup
   - kali
