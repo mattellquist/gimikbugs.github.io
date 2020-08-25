@@ -23,6 +23,6 @@ Traverxec is an easy linux box that features a Nostromo Web Server, which is vul
 ports=$(nmap -p- --min-rate=1000 -T4 10.10.10.165 | grep ^[0-9] | cut -d '/' -f
 1 | tr '\n' ',' | sed s/,$//)
 nmap -p$ports -sC -sV 10.10.10.165
-```bash
+```
 
 ![Initial NMAP](/images/traverxec/nmap.png)
