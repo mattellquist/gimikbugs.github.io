@@ -11,7 +11,6 @@ tags:
   - Writeup
   - kali
   - hack the box
-
 sidebar:
   - title: "Traverxec"
     image: /images/traverxec/traverxec_bio.png
