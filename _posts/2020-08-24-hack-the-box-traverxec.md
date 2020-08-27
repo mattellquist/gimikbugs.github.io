@@ -2,8 +2,9 @@
 title: "Traverxec"
 subtitle: Hack The Box
 date: 2020-08-24
-related_image: '/images/traverxec/traverxec_bio.png'
-share-img: '/images/traverxec/traverxec_bio.png'
+featured_image: /images/traverxec/traverxec_bio.png
+image: /images/traverxec/traverxec_bio.png
+share-img: /images/traverxec/traverxec_bio.png
 published: true
 categories: write-ups
 author_profile: true
