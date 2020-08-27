@@ -294,7 +294,7 @@ defaults:
   # _writeups
   - scope:
       path: ""
-      type: portfolio
+      type: writeups
     values:
       layout: single
       author_profile: false
