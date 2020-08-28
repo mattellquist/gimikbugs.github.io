@@ -1,7 +1,7 @@
 ---
 layout: posts
-permalink: /certifications/
-title: "Certifications"
+permalink: /resources/
+title: "Resources"
 author_profile: true
 header:
   image: "/images/cert2.png"
