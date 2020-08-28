@@ -6,7 +6,8 @@ collection: writeups
 entries_layout: grid
 header:
   image: "/images/writeups.png"
-classes: wise
+classes: wide
 author_profile: false
+show_exerpts: true
 ---
 

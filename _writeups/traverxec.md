@@ -1,5 +1,5 @@
 ---
-title: "Traverxec - Hack The Box"
+title: "Traverxec"
 excerpt: "Traverxec is an easy linux box that features a Nostromo Web Server, which is vulnerable to Remote Code Execution (RCE)."
 header:
   image: "/images/writeups.png"
