@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /
-hidden: false
+hidden: true
 header:
   #overlay_color: "#5e616c"
   overlay_image: /images/logo/Twitter-cover-photo.jpg
