@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 hidden: true
 header:
-  #overlay_color: "#5e616c"
+  overlay_color: "#5e616c"
   overlay_image: /images/logo/Twitter-cover-photo.jpg
   actions:
     - label: "Read More"
@@ -33,3 +33,5 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Learn more"      
 ---
+
+{% include feature_row %}
