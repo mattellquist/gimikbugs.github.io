@@ -18,6 +18,7 @@ sidebar:
     text: "Hack The Box"
   - title: "Skills Learned"
     text: "SSH Key Cracking, GTFOBins"  
+classes: wide
 ---
 
 # Overview
