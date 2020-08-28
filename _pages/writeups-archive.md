@@ -6,5 +6,6 @@ collection: writeups
 entries_layout: grid
 header:
   image: "/images/writeups.png"
+classes: wise
 ---
 
