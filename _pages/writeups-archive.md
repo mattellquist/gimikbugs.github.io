@@ -7,5 +7,6 @@ entries_layout: grid
 header:
   image: "/images/writeups.png"
 classes: wise
+author_profile: false
 ---
 
