@@ -175,6 +175,7 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  - /images/logo
 keep_files:
   - .git
   - .svn
@@ -300,9 +301,21 @@ defaults:
       author_profile: false
       share: true
 
+  # _projects    
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+
 # Collections
 collections:
   writeups:
+    output: true
+    permalink: /:collection/:path/
+  projects:
     output: true
     permalink: /:collection/:path/
 
