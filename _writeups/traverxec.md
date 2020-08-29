@@ -12,6 +12,8 @@ tags:
   - kali
   - hack the box
 sidebar:
+  - image: /images/traverxec/traverxec_bio.png
+  - image_alt: "Traverxec"
   - nav: sidebar-traverxec
 classes: 
    - wide

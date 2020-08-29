@@ -11,8 +11,6 @@ main:
 
 # side bars
 sidebar-traverxec:
-  - image: /images/traverxec/traverxec_bio.png
-  - image_alt: "Traverxec"
   - title: Traverxec 
     children:
       - title: "Hack The Box"
