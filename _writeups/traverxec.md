@@ -11,14 +11,16 @@ tags:
   - Writeup
   - kali
   - hack the box
-sidebar:
-  - title: "Traverxec"
-    image: /images/traverxec/traverxec_bio.png
-    image_alt: "Traverxec"
-    text: "Hack The Box"
-  - title: "Skills Learned"
-    text: "SSH Key Cracking, GTFOBins"  
-classes: wide
+#sidebar:
+#  - title: "Traverxec"
+#    image: /images/traverxec/traverxec_bio.png
+#    image_alt: "Traverxec"
+#    text: "Hack The Box"
+#  - title: "Skills Learned"
+#    text: "SSH Key Cracking, GTFOBins"  
+classes: 
+   - landing
+   - dark
 toc: true
 ---
 
