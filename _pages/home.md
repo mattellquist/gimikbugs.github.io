@@ -1,5 +1,5 @@
 ---
-title: <p style="color:#355e87;">GimikSec</p>
+title: <span style="color:#355e87;">GimikSec</span>
 layout: splash
 permalink: /
 hidden: true
@@ -10,7 +10,7 @@ header:
     - label: "Read More"
       url: "/about/"
 excerpt: >
-  <p style="color:#355e87;">A collection of hacker-friendly materials,<br />write-ups and resources.</p><br />
+  <span style="color:#355e87;">A collection of hacker-friendly materials,<br />write-ups and resources.</span><br />
 feature_row:
   - image_path: "/images/homepage/home-write-ups.png"
     alt: "write-ups"
