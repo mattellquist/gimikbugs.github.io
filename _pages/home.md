@@ -11,14 +11,14 @@ header:
 excerpt: >
   A collection of hacker-friendly materials, write-ups and resources.<br />
 feature_row:
-  - image_path: /images/writeups.png
+  - image_path: "/images/homepage/home-write-ups.png"
     alt: "write-ups"
     title: "Write-Ups"
     excerpt: "Everything from Hack The Box to Try Hack Me."
     url: "/writeups/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /images/proj.png
+  - image_path: /images/homepage/home_proj.png
     alt: "Projects"
     title: "Projects"
     excerpt: "A collection of projects, ranging from Python Projects, Home Labs, and even this Website."
