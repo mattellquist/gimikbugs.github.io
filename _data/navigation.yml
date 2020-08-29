@@ -8,6 +8,19 @@ main:
     url: /writeups/
   - title: "Resources"
     url: /resources/
+
+# side bars
+sidebar-traverxec:
+  - title: "Skills Learned"
+    children:
+      - title: "SSH Key Cracking"
+        url: https://www.youtube.com/watch?v=yhC5Kh5Z_4o&feature=emb_title
+      - title: "GTFOBins"
+        url: https://gtfobins.github.io/
+      #- title: "Child Page A3"
+      #  url: /
+      #- title: "Child Page A4"
+      #  url: /
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"

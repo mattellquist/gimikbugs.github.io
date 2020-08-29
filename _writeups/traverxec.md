@@ -16,10 +16,7 @@ sidebar:
     image: /images/traverxec/traverxec_bio.png
     image_alt: "Traverxec"
     text: "Hack The Box"
-  - title: "Skills Learned"
-      children:  
-        - title: "SSH Key Cracking"
-        - title: "GTFOBin"  
+  - nav: sidebar-traverxec
 classes: 
    - wide
    - dark
