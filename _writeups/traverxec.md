@@ -54,7 +54,7 @@ The webpage appears to be pretty empty, resulting in very little information at 
 gobuster dir -u http://10.10.10.165 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -n
 ```
 
-While we let gobuster run in the background, I look to Google. After a bit of digging, we find that Nostromo version 1.9.6 has a [Remote Code Execution](https://www.exploit-db.com/exploits/47837) vulnerability. Being that this exploit is found on Exploit-DB, that usually means there is a Metasploit module for it - which means we can "manually" exploit it or use Metasploit. I'll show both ways.
+While we let gobuster run in the background, I look to Google. After a bit of digging, we find that Nostromo version 1.9.6 has a <a href="https://www.exploit-db.com/exploits/47837">Remote Code Execution</a> vulnerability. Being that this exploit is found on Exploit-DB, that usually means there is a Metasploit module for it - which means we can "manually" exploit it or use Metasploit. I'll show both ways.
 
 1. "Manual" exploitation.
 
