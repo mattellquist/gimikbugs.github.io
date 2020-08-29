@@ -182,9 +182,9 @@ The archive contains SSH keys, one of them being the private key `id_rsa`.
 Looks like it found the same hash we did. Time to crack it!
 
 ---
-### Hashcat
+###### Disclaimer!
 
-> As a disclaimer, this is a small rabbit-hole, but not entirely useless. If you didn't find the hidden directory in David's home directory, this was another way to get the same end result.
+> This is a small rabbit-hole, but not entirely useless. If you didn't find the hidden directory in David's home directory, this was another way to get the same end result.
 
 
 
