@@ -27,8 +27,8 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: /images/resources.jpg
-    alt: "Resources - 100% Free"
-    title: "100% free"
+    alt: "100% free"
+    title: "Resources - 100% Free"
     excerpt: "A library of resources that I've used along my journey."
     url: "/resources/"
     btn_class: "btn--primary"
