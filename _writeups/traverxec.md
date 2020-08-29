@@ -67,7 +67,7 @@ searchsploit -m /multiple/remote/47837
 
 ![Exploit](/images/traverxec/payload.png)
 
-## The heck is going on?
+# The heck is going on?
 
 Interesting. We're exploiting the `http_verify` function in nostromo nhttpd. Which is allowing us remote code execution. Let's test it out:
 
