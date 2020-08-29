@@ -9,7 +9,7 @@ header:
     - label: "Read More"
       url: "/about/"
 excerpt: >
-  A collection of hacker-friendly materials, write-ups and resources.<br />
+  <p style="color:#355e87;">A collection of hacker-friendly materials,<br />write-ups and resources.</p>
 feature_row:
   - image_path: "/images/homepage/home-write-ups.png"
     alt: "write-ups"
