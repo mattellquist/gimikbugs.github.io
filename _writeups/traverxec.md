@@ -19,7 +19,7 @@ sidebar:
   - title: "Skills Learned"
     text: "SSH Key Cracking, GTFOBins"  
 classes: 
-   - landing
+   - wide
    - dark
 toc: true
 ---
