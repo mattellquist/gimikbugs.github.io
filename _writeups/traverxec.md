@@ -8,9 +8,12 @@ header:
 share_image: /images/traverxec/traverxec_bio.png
 author_profile: false
 tags:
-  - Writeup
+  - writeup
   - kali
   - hack the box
+  - hashcat
+  - johntheripper
+  - ssh2john
 sidebar:
   - image: /images/traverxec/traverxec_bio.png
   - image_alt: "Traverxec"
@@ -204,3 +207,4 @@ hashcat -m 500 -a 0 --force hash /usr/share/wordlists/rockyou.txt
 After a little while, we successfully crack the hash!
 
 ![Hashcat-Usage](/images/traverxec/hashcat2.png)
+
