@@ -114,13 +114,11 @@ After we fire off the exploit, we get a shell:
 Let's move forward with our manual shell. But first, we need to stabelize it. I don't know about you, but I can't live without TAB auto-cmplete!
 
 The target machine is Linux, so it *SHOULD* have `Python` installed, but lets check anyway.
-
 ```bash
 which python
 /usr/bin/python
 ```
 *Let's spawn a TTY shell!* 
-
 ```bash
 python -c 'import pty;pty.spawn("/bin/bash")'
 ctrl+z (to background)
