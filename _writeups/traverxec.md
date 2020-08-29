@@ -17,7 +17,9 @@ sidebar:
     image_alt: "Traverxec"
     text: "Hack The Box"
   - title: "Skills Learned"
-    text: "SSH Key Cracking, GTFOBins"  
+    text: 
+      - [x] SSH Key Cracking 
+      - [x] GTFOBin  
 classes: 
    - wide
    - dark
