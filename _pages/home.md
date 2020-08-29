@@ -3,8 +3,8 @@ layout: splash
 permalink: /
 hidden: true
 header:
-  #overlay_color: "#5e616c"
-  overlay_image: "/images/splash.jpg"
+  overlay_color: "#5e616c"
+  overlay_image: "/images/homepage/home2.jpg"
   actions:
     - label: "Read More"
       url: "/about/"
