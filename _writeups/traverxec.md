@@ -57,7 +57,7 @@ gobuster dir -u http://10.10.10.165 -w /usr/share/wordlists/dirbuster/directory-
 While we let gobuster run in the background, I look to Google. After a bit of digging, we find that Nostromo version 1.9.6 has a <a href="https://www.exploit-db.com/exploits/47837">Remote Code Execution</a> vulnerability. Being that this exploit is found on Exploit-DB, that usually means there is a Metasploit module for it - which means we can "manually" exploit it or use Metasploit. I'll show both ways.
 
 ---
-# "Manual" exploitation.
+# "Manual" exploitation
 
 First, we need to copy the exploit from exploit-db and inspect it:
 
