@@ -7,7 +7,7 @@ entries_layout: grid
 header:
   image: "/images/writeups.png"
 classes: wide
-author_profile: false
+author_profile: true
 show_exerpts: true
 ---
 
