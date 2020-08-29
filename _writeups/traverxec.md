@@ -186,5 +186,21 @@ Looks like it found the same hash we did. Time to crack it!
 
 > This is a small rabbit-hole, but not entirely useless. If you didn't find the hidden directory in David's home directory, this was another way to get the same end result.
 
+In order to crack the hash, we need to identify waht type of hash it is. By inspecting the hash, we see it starts with `$1$` - this means its an `MD5 hash`. Now, we can just throw the hash into a file and run it through `Hashcat`.
 
+```bash
+vi hash
+(copy and paste hash)
+:wq
+```
 
+```bash
+hashcat -m 500 -a 0 --force hash /usr/share/wordlists/rockyou.txt
+```
+> `-m` flag is used to set the mode. `500` is to set the mode to `MD5`.
+
+![Hashcat-Usage](/images/traverxec/hashcat1.png)
+
+After a little while, we successfully crack the hash!
+
+![Hashcat-Usage](/images/traverxec/hashcat2.png)
