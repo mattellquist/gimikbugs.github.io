@@ -152,7 +152,7 @@ We have linpeas running, so now we can start manually enumerating the box. We ch
 
 ```bash
 ls -la /home/david/public_www/
-ls -la /home/david/public_www/
+ls -la /home/david/public_www/protected-file-area/
 ```
 
 ![Protected-Area](/images/traverxec/enum-protected.png)
