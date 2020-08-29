@@ -1,6 +1,7 @@
 ---
 title: "Traverxec"
 excerpt: "Traverxec is an easy linux box that features a Nostromo Web Server, which is vulnerable to Remote Code Execution (RCE)."
+layout: page
 header:
   image: "/images/writeups.png"
   teaser: /images/traverxec/traverxec_bio.png
