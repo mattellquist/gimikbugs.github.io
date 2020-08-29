@@ -15,7 +15,7 @@ feature_row:
   - image_path: "/images/homepage/home-write-ups.png"
     alt: "write-ups"
     title: "Write-Ups"
-    excerpt: "Everything from Hack The Box to Try Hack Me.<br />"
+    excerpt: "Everything ranging from Hack The Box to Try Hack Me.<br />"
     url: "/writeups/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
