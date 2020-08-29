@@ -70,6 +70,7 @@ Interesting. We're exploiting the `http_verify` function in nostromo nhttpd. Whi
 ```bash
 python 47837.py 10.10.10.165 80 id
 ```
+![Response](/images/traverxec/id.png)
 
 Ok, cool, we got a response. Lets setup a listener and try to get a shell:
 
@@ -85,7 +86,7 @@ And........ We get a shell
 
 ---
 
-
 # Metasploit
+
 
 
