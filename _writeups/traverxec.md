@@ -16,7 +16,7 @@ sidebar:
 classes: 
    - wide
    - dark
-toc: true
+toc: false
 ---
 
 # Overview
