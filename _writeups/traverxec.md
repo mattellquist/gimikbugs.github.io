@@ -187,7 +187,7 @@ Looks like it found the same hash we did. Time to crack it!
 ---
 ###### Disclaimer!
 
-> This is a small rabbit-hole, but not entirely useless. If you didn't find the hidden directory in David's home directory, this was another way to get the same end result.
+> This is a small rabbit-hole, but not entirely useless. If you didn't find the protected-file-area in David's home directory, this was another way to get the same end result.
 
 In order to crack the hash, we need to identify waht type of hash it is. By inspecting the hash, we see it starts with `$1$` - this means its an `MD5 hash`. Now, we can just throw the hash into a file and run it through `Hashcat`.
 
@@ -208,3 +208,87 @@ After a little while, we successfully crack the hash!
 
 ![Hashcat-Usage](/images/traverxec/hashcat2.png)
 
+Great, now we have the password for David. We can try to `ssh` into David's account and hope that the password is the same, but I'll save you the trouble - it isn't.
+
+**So where do we use this password?**
+Had we enumerated more onto the website, or taken the information from David's home directory, `~/David/public_www/protected-file-area` and checked the website - we would find that we are prompted with a login at `10.10.10.165/~david/protected-file-area/`.
+
+![Protected-file-area](/images/traverxec/david-login.png)
+
+We use `david`:`Nowonly4me` and get in! We find the same file as we did on the box.
+
+![David-Webdir](/images/traverxec/david-webdir.png)
+
+---
+# SSH Key Cracking
+Now that we've stumbled upon the private key for David, lets crack it. In order to crack it, we need to follow these steps:
+
+1. Use ssh2john to convert the private key into a hash file that <a href="https://github.com/openwall/john">John the Ripper</a> can use. 
+2. Use John the Ripper and a password file, like `rockyou.txt` to crack the hash. 
+
+```bash
+/opt/JohnTheRipper/run/ssh2john.py id_rsa > davidHash
+```
+```bash
+john --wordlist=/usr/share/wordlists/rockyou.txt davidHash
+```
+![JTR-Crack](/images/traverxec/ssh-cracked.png)
+
+We use the newly cracked private key and the credentials `david`:`hunter` to `ssh` into the box and get the user flag.
+
+```bash
+ssh -i id_rsa david@10.10.10.165
+```
+![Getting-User](/images/traverxec/getting-user.png)
+
+*[HACKER VOICE]* I'm in.
+
+---
+# Privilege Escalation
+David's home directory has an interesting `bin` folder, which contains a file `server-stats.sh.
+
+```bash
+cat server-stats.sh
+```
+![Server-Stats](/images/traverxec/server-stats.png)
+The last line is interesting because it's executing `journalctl` as sudo.
+
+```bash
+./server-stats.sh
+```
+Well, as we might have expected, the script is returning the last 5 lines of the nostromo service logs using journalctl. 
+
+Let's review the `manual page` of journalctl:
+![man-journalctl](/images/traverxec/man-journalctl.png)
+
+*Interesting* the man page says journalctl uses the <a href="https://gtfobins.github.io/gtfobins/less/">less</a> binary to display its' output, and that long lines are "truncated" to screen width.
+
+Ok, cool. We know from <a href="https://gtfobins.github.io/gtfobins/">GTFOBins</a> that we can get a shell from using less. We also know that this shell will be running as root, because when we can execute journalctl with sudo. Let's give it a shot.
+
+```bash
+/usr/bin/sudo /usr/bin/journalctl -n5 -unostromo.service
+```
+> This command is from the last line in `server-stats.sh`.
+
+![fail](/images/traverxec/fail.png)
+
+**Did it work?**
+
+This exploit is tricky. This will not work initially if you have your terminal at full screen. Why? Because, if you recall, the output is "truncated for long lines". Our terminal is full screen, and less doesn't need to truncate full lines. This means the `server-stats.sh` script can run it's entire command without being interrupted. 
+
+**What if we *shrink* our terminal and run the script again?**
+
+```bash
+/usr/bin/sudo /usr/bin/journalctl -n5 -unostromo.service
+!/bin/bash [enter]
+```
+![Gett-Root](/images/traverxec/root.png)
+
+# We got ROOT!
+
+Why did that work? It worked because less truncated the output and waited for user input to either continue or exit. We exploited that to spawn a root shell.
+
+---
+# Final Thoughts
+
+This was an easy box, however, the intial foothold for user definately required you to think outside the box. However, I think it's a good reminder that spending quality time `enumerating` will always pay off.
