@@ -21,8 +21,8 @@ sidebar-traverxec:
         url: https://www.youtube.com/watch?v=yhC5Kh5Z_4o&feature=emb_title
       - title: "GTFOBins"
         url: https://gtfobins.github.io/
-      #- title: "Child Page A3"
-      #  url: /
+      - title: "Hashcat"
+        url: https://hashcat.net/wiki/
       #- title: "Child Page A4"
       #  url: /
   # - title: "Sample Posts"
