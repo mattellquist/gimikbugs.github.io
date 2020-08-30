@@ -1,16 +1,16 @@
 ---
-title: <span style="color:#355e87;">GimikSec</span>
+title: GimikSec
 layout: splash
 permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: "/images/homepage/PNG.png"
+  overlay_image: "/images/homepage/splash3.png"
   actions:
     - label: "Read More"
       url: "/about/"
 excerpt: >
-  <span style="color:#355e87;">A collection of hacker-friendly materials,<br />write-ups and resources.</span><br /><br /><br />
+  A collection of hacker-friendly materials,<br />write-ups and resources.</span><br /><br /><br />
 feature_row:
   - image_path: "/images/homepage/home-write-ups.png"
     alt: "write-ups"
@@ -32,7 +32,9 @@ feature_row:
     excerpt: "A library of resources that I've used along my journey."
     url: "/resources/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"      
+    btn_label: "Learn more"    
+
+# <span style="color:#355e87;">GimikSec</span>
 ---
 
 {% include feature_row %}
