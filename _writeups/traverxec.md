@@ -245,7 +245,7 @@ ssh -i id_rsa david@10.10.10.165
 
 ---
 # Privilege Escalation
-David's home directory has an interesting `bin` folder, which contains a file `server-stats.sh.
+David's home directory has an interesting `bin` folder, which contains a file `server-stats.sh`.
 
 ```bash
 cat server-stats.sh
