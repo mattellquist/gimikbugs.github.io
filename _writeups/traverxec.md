@@ -251,6 +251,7 @@ David's home directory has an interesting `bin` folder, which contains a file `s
 cat server-stats.sh
 ```
 ![Server-Stats](/images/traverxec/server-stats.png)
+
 The last line is interesting because it's executing `journalctl` as sudo.
 
 ```bash
