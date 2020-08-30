@@ -5,7 +5,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: "/images/homepage/home2.jpg"
+  overlay_image: "/images/homepage/splash.png"
   actions:
     - label: "Read More"
       url: "/about/"
