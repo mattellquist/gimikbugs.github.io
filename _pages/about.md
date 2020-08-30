@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "#WHOAMI"
 permalink: /about/
 header:
     image: "/images/about-me.png"
