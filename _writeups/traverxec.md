@@ -110,8 +110,8 @@ After we fire off the exploit, we get a shell:
 ![Metasploit-Shell](/images/traverxec/meta-shell.png)
 
 ---
-# Stabelize Shell
-Let's move forward with our manual shell. But first, we need to stabelize it. I don't know about you, but I can't live without TAB auto-cmplete!
+# Stabilize Shell
+Let's move forward with our manual shell. But first, we need to stabilize it. I don't know about you, but I can't live without TAB auto-cmplete!
 
 The target machine is Linux, so it *SHOULD* have `Python` installed, but lets check anyway.
 ```bash
